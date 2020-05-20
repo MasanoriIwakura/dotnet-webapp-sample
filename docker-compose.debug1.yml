@@ -8,4 +8,9 @@ services:
       context: .
       dockerfile: dotnet-api/Dockerfile
     ports:
-      - 5000:80
+      - 80
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=http://+:80
+    volumes:
+      - ~/.vsdbg:/remote_debugger:rw
