@@ -9,9 +9,9 @@
         "type": "coreclr",
         "request": "launch",
         "preLaunchTask": "build",
-        "program": "${workspaceFolder}/dotnet-api/bin/Debug/netcoreapp3.1/dotnet-api.dll",
+        "program": "${workspaceFolder}/Server/bin/Debug/netcoreapp3.1/dotnet-webapp-sample.Server.dll",
         "args": [],
-        "cwd": "${workspaceFolder}/dotnet-api",
+        "cwd": "${workspaceFolder}/Server",
         "stopAtEntry": false,
         "serverReadyAction": {
             "action": "openExternally",
@@ -36,7 +36,7 @@
         "request": "launch",
         "preLaunchTask": "docker-run: debug",
         "netCore": {
-            "appProject": "${workspaceFolder}/dotnet-api/dotnet-api.csproj"
+            "appProject": "${workspaceFolder}/Server/dotnet-webapp-sample.Server.csproj"
         }
     }
 ]

@@ -7,7 +7,7 @@
             "type": "process",
             "args": [
                 "build",
-                "${workspaceFolder}/dotnet-api/dotnet-api.csproj",
+                "${workspaceFolder}/Server/dotnet-webapp-sample.Server.csproj",
                 "/property:GenerateFullPaths=true",
                 "/consoleloggerparameters:NoSummary"
             ],
@@ -19,7 +19,7 @@
             "type": "process",
             "args": [
                 "publish",
-                "${workspaceFolder}/dotnet-api/dotnet-api.csproj",
+                "${workspaceFolder}/Server/dotnet-webapp-sample.Server.csproj",
                 "/property:GenerateFullPaths=true",
                 "/consoleloggerparameters:NoSummary"
             ],
@@ -32,7 +32,7 @@
             "args": [
                 "watch",
                 "run",
-                "${workspaceFolder}/dotnet-api/dotnet-api.csproj",
+                "${workspaceFolder}/Server/dotnet-webapp-sample.Server.csproj",
                 "/property:GenerateFullPaths=true",
                 "/consoleloggerparameters:NoSummary"
             ],
@@ -47,12 +47,12 @@
             "dockerBuild": {
                 "tag": "dotnetwebappsample:dev",
                 "target": "base",
-                "dockerfile": "${workspaceFolder}/dotnet-api/Dockerfile",
+                "dockerfile": "${workspaceFolder}/Server/Dockerfile",
                 "context": "${workspaceFolder}",
                 "pull": true
             },
             "netCore": {
-                "appProject": "${workspaceFolder}/dotnet-api/dotnet-api.csproj"
+                "appProject": "${workspaceFolder}/Server/dotnet-webapp-sample.Server.csproj"
             }
         },
         {
@@ -63,12 +63,12 @@
             ],
             "dockerBuild": {
                 "tag": "dotnetwebappsample:latest",
-                "dockerfile": "${workspaceFolder}/dotnet-api/Dockerfile",
+                "dockerfile": "${workspaceFolder}/Server/Dockerfile",
                 "context": "${workspaceFolder}",
                 "pull": true
             },
             "netCore": {
-                "appProject": "${workspaceFolder}/dotnet-api/dotnet-api.csproj"
+                "appProject": "${workspaceFolder}/Server/dotnet-webapp-sample.Server.csproj"
             }
         },
         {
@@ -79,7 +79,7 @@
             ],
             "dockerRun": {},
             "netCore": {
-                "appProject": "${workspaceFolder}/dotnet-api/dotnet-api.csproj",
+                "appProject": "${workspaceFolder}/Server/dotnet-webapp-sample.Server.csproj",
                 "enableDebugging": true
             }
         },
@@ -91,7 +91,7 @@
             ],
             "dockerRun": {},
             "netCore": {
-                "appProject": "${workspaceFolder}/dotnet-api/dotnet-api.csproj"
+                "appProject": "${workspaceFolder}/Server/dotnet-webapp-sample.Server.csproj"
             }
         }
     ]
